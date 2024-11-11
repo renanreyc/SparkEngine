@@ -1,0 +1,48 @@
+include:
+  - template: Jobs/Dependency-Scanning.gitlab-ci.yml
+  - template: Jobs/SAST.gitlab-ci.yml
+  - template: Jobs/Secret-Detection.gitlab-ci.yml
+  - template: Jobs/Code-Quality.gitlab-ci.yml
+
+default:
+  image: maven:3-openjdk-11
+
+variables:
+  OBS_DEV: obs://obs-hwc-dev-dataplatform-code/projects/spark-engine/
+  OBS_DEV_ENDPOINT: obs.la-south-2.myhuaweicloud.com
+  OBS_PRD: obs://bucket-prd-data-platform-code-01/projects/spark-engine/
+  OBS_PRD_ENDPOINT: obs.la-south-2.myhuaweicloud.com
+
+stages:
+  - dev
+  - prod
+  - test
+
+.hcloud:
+  before_script:
+    - apt-get update -y && apt-get install curl -y
+    - curl -sSL https://ap-southeast-3-hwcloudcli.obs.ap-southeast-3.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
+    - bash ./hcloud_install.sh -y
+    - hcloud configure set --cli-agree-privacy-statement=true
+
+deploy_dev:
+  stage: dev
+  before_script:
+    - !reference [.hcloud, before_script]
+  script:
+    - hcloud obs config -i=$AK_DEV -k=$SK_DEV -e=$OBS_DEV_ENDPOINT
+    - mvn package -Dmaven.test.skip=true
+    - find target/ -name "*with-dependencies.jar" -exec hcloud obs cp {} $OBS_DEV \;
+  only:
+    - merge_requests
+
+# deploy_prod:
+#   stage: prod
+#   before_script:
+#     - !reference [.hcloud, before_script]
+#   script:
+#     - hcloud obs config -i=$AK_PRD -k=$SK_PRD -e=$OBS_PRD_ENDPOINT
+#     - mvn package -Dmaven.test.skip=true
+#     - find target/ -name "*with-dependencies.jar" -exec hcloud obs cp {} $OBS_PRD \;
+#   only:
+#     - main
