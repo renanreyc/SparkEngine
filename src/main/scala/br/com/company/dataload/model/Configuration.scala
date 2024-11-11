@@ -1,4 +1,4 @@
-package br.com.neogrid.dataload.model
+package br.com.company.dataload.model
 
 import org.json4s.JsonAST.JObject
 case class Configuration(load: Seq[Load],

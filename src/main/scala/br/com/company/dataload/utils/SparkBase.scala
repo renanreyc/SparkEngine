@@ -1,4 +1,4 @@
-package br.com.neogrid.dataload.utils
+package br.com.company.dataload.utils
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession

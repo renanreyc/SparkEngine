@@ -1,4 +1,4 @@
-package br.com.neogrid.dataloadhistoryRi
+package br.com.company.dataloadhistoryRi
 
 
 case class Params(
@@ -91,4 +91,3 @@ object Params {
   }
   }
 }
-

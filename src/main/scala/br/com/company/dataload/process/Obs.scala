@@ -1,9 +1,9 @@
-package br.com.neogrid.dataload.process
+package br.com.company.dataload.process
 
-import br.com.neogrid.commons.CustomLogger
-import br.com.neogrid.dataload.model.{Load, Output, Transform}
-import br.com.neogrid.dataload.utils.Functions._
-import br.com.neogrid.dataload.utils.Parameters
+import br.com.company.commons.CustomLogger
+import br.com.company.dataload.model.{Load, Output, Transform}
+import br.com.company.dataload.utils.Functions._
+import br.com.company.dataload.utils.Parameters
 import com.obs.services._
 import com.obs.services.model.ListObjectsRequest
 import org.apache.spark.sql.SparkSession

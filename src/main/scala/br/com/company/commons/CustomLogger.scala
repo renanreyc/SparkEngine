@@ -1,4 +1,4 @@
-package br.com.neogrid.commons
+package br.com.company.commons
 
 import org.apache.logging.log4j.{Level, LogManager, Logger}
 

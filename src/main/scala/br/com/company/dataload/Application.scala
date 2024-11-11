@@ -1,13 +1,13 @@
-package br.com.neogrid.dataload
+package br.com.company.dataload
 
 
-import br.com.neogrid.commons.CustomLogger
-import br.com.neogrid.dataload.utils._
+import br.com.company.commons.CustomLogger
+import br.com.company.dataload.utils._
 import org.apache.spark.sql.SparkSession
-import br.com.neogrid.dataload.utils.Functions._
-import br.com.neogrid.dataload.utils.Parameters._
+import br.com.company.dataload.utils.Functions._
+import br.com.company.dataload.utils.Parameters._
 import org.apache.log4j.Logger
-import br.com.neogrid.dataload.process.Process
+import br.com.company.dataload.process.Process
 import org.apache.commons.lang3.exception.ExceptionUtils
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

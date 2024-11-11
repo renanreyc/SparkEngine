@@ -1,4 +1,4 @@
-package br.com.neogrid.dataloadhistoryRi
+package br.com.company.dataloadhistoryRi
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession

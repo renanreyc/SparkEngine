@@ -1,4 +1,4 @@
-package br.com.neogrid.dataload.utils
+package br.com.company.dataload.utils
 
 case class Parameters(
                        endpoint: String = "",
@@ -206,4 +206,3 @@ object Parameters {
     }
 
 }
-

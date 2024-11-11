@@ -1,8 +1,8 @@
-package br.com.neogrid.dataloadhistoryRi
+package br.com.company.dataloadhistoryRi
 
 
-import br.com.neogrid.commons.CustomLogger
-import br.com.neogrid.dataloadhistoryRi.Methods.{createObsClient, createTableDelta, readPathsWriteDelta}
+import br.com.company.commons.CustomLogger
+import br.com.company.dataloadhistoryRi.Methods.{createObsClient, createTableDelta, readPathsWriteDelta}
 import org.apache.log4j.Logger
 import org.apache.spark.sql._
 import org.apache.commons.lang3.exception.ExceptionUtils
@@ -32,8 +32,3 @@ object Application {
     }
   }
 }
-
-
-
-
-

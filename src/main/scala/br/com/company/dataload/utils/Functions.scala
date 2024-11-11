@@ -1,6 +1,6 @@
-package br.com.neogrid.dataload.utils
+package br.com.company.dataload.utils
 
-import br.com.neogrid.commons.CustomLogger
+import br.com.company.commons.CustomLogger
 import com.obs.services.ObsClient
 
 import java.io.{ByteArrayOutputStream, InputStream}
@@ -11,7 +11,7 @@ import org.json4s.jackson.JsonMethods._
 
 import java.util.Properties
 import java.util.concurrent.ExecutionException
-import br.com.neogrid.dataload.model._
+import br.com.company.dataload.model._
 
 import scala.io.Source
 import scala.util.{Failure, Success, Try}

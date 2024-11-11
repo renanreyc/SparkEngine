@@ -1,8 +1,8 @@
-package br.com.neogrid.dataload.process
+package br.com.company.dataload.process
 
-import br.com.neogrid.commons.CustomLogger
-import br.com.neogrid.dataload.model.Configuration
-import br.com.neogrid.dataload.utils.Parameters
+import br.com.company.commons.CustomLogger
+import br.com.company.dataload.model.Configuration
+import br.com.company.dataload.utils.Parameters
 import com.obs.services.ObsClient
 import org.apache.spark.sql.SparkSession
 

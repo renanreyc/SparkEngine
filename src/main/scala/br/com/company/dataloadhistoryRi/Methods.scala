@@ -1,8 +1,8 @@
-package br.com.neogrid.dataloadhistoryRi
+package br.com.company.dataloadhistoryRi
 
 
-import br.com.neogrid.commons.CustomLogger
-import br.com.neogrid.dataload.utils.Functions.readObjectOBS
+import br.com.company.commons.CustomLogger
+import br.com.company.dataload.utils.Functions.readObjectOBS
 import com.obs.services.ObsClient
 import com.obs.services.model.{ListObjectsRequest, ObjectListing}
 import org.apache.commons.lang3.exception.ExceptionUtils
